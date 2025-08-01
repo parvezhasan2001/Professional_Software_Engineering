@@ -11,3 +11,6 @@ def main():
     else:
         result = factorial(number)
         print(f"The factorial of {number} is {result}")
+
+if __name__ == "__main__":
+    main()

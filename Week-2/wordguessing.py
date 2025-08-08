@@ -5,7 +5,7 @@ import random
 def word_guessing_game():
     secret_words = ("python", "driving", "hiking", "surfing")
     word = random.choice(secret_words).lower()
-    lives = 5
+    lives = 3
     
     print("\nI have chosen a word. Can you guess it?")
     while lives != 0:

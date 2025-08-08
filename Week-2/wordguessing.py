@@ -8,20 +8,20 @@ def word_guessing_game():
     lives = 5
     
     print("\nI have chosen a word. Can you guess it?")
-    while lives > 0:
+    while lives != 0:
         guess = input("Enter your guess: ").lower()
         
         if guess == word:
-            print(f"🎉 Congratulations! You've guessed the word: {word}")
+            print(f" Congratulations! You've guessed the word: {word}")
             return "You Win!"
         
         else:
             lives -= 1
-            if lives > 0:
-                print("❌ Wrong guess. Try again.")
+            if lives != 0:
+                print("Wrong guess. Try again.")
                 print(f"Lives left: {lives}")
             else:
-                print(f"💀 Game Over! The word was: {word}")
+                print(f"Game Over! The word was: {word}")
                 return "You Lose!"
 
 def main():

@@ -10,10 +10,21 @@ class StringManipulator:
     def find_string_length(self):
         return len(self.text)
 
-name = StringManipulator("Example")
+    def upper_case(self):
+        return self.text.upper()
 
-result = name.find_character("x")
-result1 = name.find_string_length()
+def main():
+    name = StringManipulator("finder")
 
-print(result)
-print(result1)
+    result = name.find_character("n")
+    result1 = name.find_string_length()
+    result2 = name.upper_case()
+
+
+    print(result)
+    print(result1)
+    print(result2)
+
+
+if __name__ == '__main__':
+    main()

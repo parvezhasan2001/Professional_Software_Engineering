@@ -1,9 +1,9 @@
-# YooBee College Management System & Temperature Analysis
 
 ## Week 2 - Temperature Analysis
 This activity calculates the **average, highest, and lowest temperatures** from a list of temperature values.
 
 ---
+# YooBee College Management System & Temperature Analysis
 
 ## Week 3 - Yoobee College Management System
 This activity is a **command-line application** built using **SQLite3** to manage student and course information for YooBee College.

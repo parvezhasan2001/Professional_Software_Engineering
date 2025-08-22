@@ -1,31 +1,4 @@
- <!-- Week-3 Activity-4 
- Project Scope
- YBCollege needs to have an entity for students, lecturer, courses, class, enrollment, assessments and results to represent them accurately by storying them and organizing them in the database For Example students will be enrolled from different departments and teachers are assigned to teach different courses also we have to track the enrollment, teacher assignment and results for efficient management of academic records.
-
- Entities Listed:
-
- 1. Student - Represents a learner enrolled at YooBee.
-Attributes: StudentID (PK), FirstName, LastName, DOB, Email, Phone, Address, ProgramEnrolled, DateJoined.
-
-2. Lecturer - Represents teaching staff who deliver courses.
-Attributes: LecturerID (PK), FirstName, LastName, Email, Phone, Specialization, Department.
-
-3. Course - Represents a subject or paper offered by the college.
-Attributes: CourseID (PK), CourseName, Credits, Department, Description.
-
-4. Class - Represents a scheduled teaching session for a course.
-Attributes: ClassID (PK), CourseID (FK), LecturerID (FK), Room, ScheduleDate, Time.
-
-5. Enrollment - Represents the relationship between students and courses.
-Attributes: EnrollmentID (PK), StudentID (FK), CourseID (FK), EnrollmentDate.
-
-6. Assessment - Represents evaluation components (assignments, projects, exams).
-Attributes: AssessmentID (PK), CourseID (FK), AssessmentName, Weightage, DueDate.
-
-7. Result - Stores students’ performance in assessments.
-Attributes: ResultID (PK), AssessmentID (FK), StudentID (FK), MarksObtained, Grade. -->
-
-Week-4 Activity-1
+ Week-4 Activity-1
 
 Use Case Diagram-
 

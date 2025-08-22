@@ -1,0 +1,49 @@
+ <!-- Week-3 Activity-4 
+ Project Scope
+ YBCollege needs to have an entity for students, lecturer, courses, class, enrollment, assessments and results to represent them accurately by storying them and organizing them in the database For Example students will be enrolled from different departments and teachers are assigned to teach different courses also we have to track the enrollment, teacher assignment and results for efficient management of academic records.
+
+ Entities Listed:
+
+ 1. Student - Represents a learner enrolled at YooBee.
+Attributes: StudentID (PK), FirstName, LastName, DOB, Email, Phone, Address, ProgramEnrolled, DateJoined.
+
+2. Lecturer - Represents teaching staff who deliver courses.
+Attributes: LecturerID (PK), FirstName, LastName, Email, Phone, Specialization, Department.
+
+3. Course - Represents a subject or paper offered by the college.
+Attributes: CourseID (PK), CourseName, Credits, Department, Description.
+
+4. Class - Represents a scheduled teaching session for a course.
+Attributes: ClassID (PK), CourseID (FK), LecturerID (FK), Room, ScheduleDate, Time.
+
+5. Enrollment - Represents the relationship between students and courses.
+Attributes: EnrollmentID (PK), StudentID (FK), CourseID (FK), EnrollmentDate.
+
+6. Assessment - Represents evaluation components (assignments, projects, exams).
+Attributes: AssessmentID (PK), CourseID (FK), AssessmentName, Weightage, DueDate.
+
+7. Result - Stores students’ performance in assessments.
+Attributes: ResultID (PK), AssessmentID (FK), StudentID (FK), MarksObtained, Grade. -->
+
+Week-4 Activity-1
+
+Use Case Diagram-
+
+Actors
+
+1. Students
+2. Admin
+
+Task
+1. Students
+Case1: Creating a student account
+Case2: views the course assigned by the class
+Case3: Confirming the enrollment of student
+Case4: lecturer is assigned for the course student will take in a class
+Case5: Student will view the assessment
+
+2.Admin
+Case1: assigning students to the course which are enrolled
+Case2: assigning lecturer to teach the course
+Case3: lecturer published the results for students of that course
+

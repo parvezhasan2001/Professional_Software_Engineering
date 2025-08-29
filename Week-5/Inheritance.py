@@ -4,7 +4,7 @@
 
 #Description: This code demonstrates the use of inheritance in Python by creating a 3 level class hierarchy for a university system. The Top level is the Person class, which is inherited by the Student and Staff classes. The Staff class is further specialized into Academic and General staff.
 
-# super() is 
+# display() in student sub class is overriding the parent class and adding student ID
 
 class Person:
     def __init__(self, name, id, address, age):
@@ -20,6 +20,10 @@ class Student(Person):
     def __init__(self, name, student_id, address, age):
         super().__init__(name, address, age)
         self.student_id = student_id
+
+    def display(self):
+        super().display()
+        print(f"Student ID: {self.student_id}")
 
 class Staff(Person):
     def __init__(self, name, staff_id, tax_num, address, age):

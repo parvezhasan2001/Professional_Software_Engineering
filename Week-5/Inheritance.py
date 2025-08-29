@@ -4,21 +4,26 @@
 
 #Description: This code demonstrates the use of inheritance in Python by creating a 3 level class hierarchy for a university system. The Top level is the Person class, which is inherited by the Student and Staff classes. The Staff class is further specialized into Academic and General staff.
 
+# super() is 
+
 class Person:
-    def __init__(self, name, id):
+    def __init__(self, name, id, address, age):
         self.name = name
+        self.address = address
+        self.age = age
         self.id = id
 
     def display(self):
-        print(f"Name: {self.name}, ID: {self.id}")
+        print(f"Name: {self.name}, ID: {self.id}, Address: {self.address}, Age: {self.age}")
 
 class Student(Person):
-    def __init__(self, name, student_id):
-        super().__init__(name, student_id)
+    def __init__(self, name, student_id, address, age):
+        super().__init__(name, address, age)
+        self.student_id = student_id
 
 class Staff(Person):
-    def __init__(self, name, id, staff_id, tax_num):
-        super().__init__(name, id)
+    def __init__(self, name, staff_id, tax_num, address, age):
+        super().__init__(name, address, age)
         self.staff_id = staff_id
         self.tax_num = tax_num
 
@@ -27,8 +32,8 @@ class Staff(Person):
         print(f"Tax Number: {self.tax_num}")
 
 class Academic(Staff):
-    def __init__(self, name, id, staff_id, tax_num, publications):
-        super().__init__(name, id, staff_id, tax_num)
+    def __init__(self, name, id, staff_id, tax_num, publications, address, age):
+        super().__init__(name, id, staff_id, tax_num, address, age)
         self.academic_id = staff_id
         self.publications = publications
 
@@ -37,8 +42,8 @@ class Academic(Staff):
         print(f"Publications: {self.publications}")
 
 class General(Staff):
-    def __init__(self, name, id, staff_id, tax_num, rate_of_pay):
-        super().__init__(name, id, staff_id, tax_num)
+    def __init__(self, name, id, staff_id, tax_num, rate_of_pay, address, age):
+        super().__init__(name, id, staff_id, tax_num, address, age)
         self.general_id = staff_id
         self.rate_of_pay = rate_of_pay
 

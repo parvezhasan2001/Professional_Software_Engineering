@@ -1,0 +1,33 @@
+
+High-Level Architecture (Layered + Patterns)
+===========================================
+
++-------------------------------+
+|           app.py              |
+|  CLI / Interface Layer        |
++-------------------------------+
+               |
+               v
++-------------------------------+
+|        services.py            |
+|  Application / Domain Layer   |
+|  - UserService                |
+|  - CarService                 |
+|  - BookingService             |
+|  Uses: pricing, observer      |
++-------------------------------+
+               |
+               v
++-------------------------------+
+|    db.py (Singleton DB)       |
+|  Infrastructure / Data Layer  |
+|  SQLite + schema + queries    |
++-------------------------------+
+
+Supporting Modules
+------------------
+- models.py: Entities + Factory Method (UserFactory, CarFactory)
+- auth.py: Password hashing/verification (hashlib + secrets)
+- pricing.py: Fee rules (daily rate, discounts)
+- observer.py: Observer pattern (event bus)
+- seed.py: Initial admin + sample cars

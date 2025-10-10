@@ -1,6 +1,6 @@
 #Week-11
 #Activity-2
-
+# Create a simple expense tracker that allows users to add expenses and calculate the total expense.
 import unittest
 
 class Expense:
@@ -34,6 +34,6 @@ class TestExpenseTracker(unittest.TestCase):
         tracker.add_expense(50, "Groceries")
         tracker.add_expense(20, "Transport")
         self.assertEqual(tracker.total_expenses(), 70)
-        
+
 if __name__ == "__main__":
     unittest.main()

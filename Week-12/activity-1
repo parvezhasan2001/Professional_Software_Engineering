@@ -8,5 +8,9 @@ app = Flask(__name__)
 def activity_1():
     return '*Hello, Flask*'
 
+@app.route('/username/<name>')
+def activity_2(name):
+    return f'{name} is learning Flask'
+
 if __name__ == '__main__':
     app.run(debug=True)
